@@ -1,0 +1,127 @@
+/* Importación de fuentes de Google Fonts */
+/* Es importante que estas líneas estén al principio del CSS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Estilos globales y reseteo */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Sección del encabezado principal */
+.hero-section {
+    background-image: url('URL-DE-TU-IMAGEN-DE-FONDO.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Texto blanco sobre la imagen */
+    padding: 20px;
+    height: 100vh; /* Opcional: para que ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Barra de navegación */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+/* Contenido de texto del encabezado */
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.headline {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Sección de llamada a la acción */
+.call-to-action {
+    background-color: #f7f7f7; /* Color de fondo similar al de la imagen */
+    padding: 40px 20px;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra más sutil */
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.btn-catalog {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-catalog:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+footer span {
+    font-weight: bold;
+    color: #666;
+}
