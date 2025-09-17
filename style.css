@@ -1,4 +1,3 @@
-/
 /* --- Estilos Generales --- */
 body {
     font-family: 'Poppins', sans-serif;
@@ -6,17 +5,17 @@ body {
     padding: 0;
     line-height: 1.6;
     height: 100vh;
-    display: flex; /* Permite que el contenido se apile en la misma posición */
+    display: flex;
 }
 
-/* --- El Carrusel de Fondo (Nueva Sección) --- */
+/* --- El Carrusel de Fondo --- */
 .background-carousel {
-    position: fixed; /* Mantiene el carrusel en la misma posición al hacer scroll */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Lo envía detrás de todo el contenido */
+    z-index: -1;
     overflow: hidden;
 }
 
@@ -31,22 +30,22 @@ body {
     min-width: 100%;
     height: 100%;
     flex-shrink: 0;
-    object-fit: cover; /* Asegura que la imagen cubra toda la pantalla sin distorsionarse */
+    object-fit: cover;
     display: block;
 }
 
-/* --- Contenido de la Página (Nueva Sección) --- */
+/* --- Contenido de la Página (Ajustado) --- */
 .main-content-wrapper {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente para el contenido */
-    overflow-y: auto; /* Permite hacer scroll en el contenido */
+    /* REMOVIDO: background-color: rgba(255, 255, 255, 0.9); */
+    overflow-y: auto;
 }
 
 /* --- Estilos de la Página (Ajustados) --- */
 .hero-section {
     color: #333;
     padding: 20px;
-    height: 100vh; /* Ocupa la altura completa de la vista */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,7 +60,7 @@ body {
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 15rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
@@ -138,6 +137,8 @@ h2 {
 .secondary-title-section {
     padding: 20px 20px 40px;
     text-align: center;
+    /* AGREGADO: Fondo para esta sección */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 footer {
@@ -145,6 +146,8 @@ footer {
     padding: 20px;
     color: #999;
     font-size: 0.9rem;
+    /* AGREGADO: Fondo para el footer */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 footer span {
