@@ -36,10 +36,9 @@ h1, h2, h3, .logo {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2.5rem; /* El nuevo tamaño del texto */
     font-weight: 600;
 }
-
 .nav-dots {
     display: flex;
     gap: 8px;
