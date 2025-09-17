@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         moveToSlide(track, currentSlide);
     });
-    // Deslizamiento automático
+  // Deslizamiento automático
 const autoSlideInterval = 3000; // 3000 milisegundos = 3 segundos
 let slideTimer;
 
@@ -74,5 +74,4 @@ prevButton.addEventListener('click', () => {
     }
     moveToSlide(track, currentSlide);
     resetAutoSlide(); // Reinicia el temporizador
-});
 });
