@@ -1,36 +1,33 @@
-/* Importación de fuentes de Google Fonts */
-/* Es importante que estas líneas estén al principio del CSS */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Estilos globales y reseteo */
+/* --- Estilos Generales --- */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fuente para el texto del cuerpo */
     margin: 0;
     padding: 0;
     color: #333;
     line-height: 1.6;
-    background-color: #f7f7f7;
+    background-color: #f7f7f7; /* Color de fondo general */
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif; /* Fuente para títulos y logo */
+    font-weight: 500;
 }
 
-/* Sección del encabezado principal */
+/* --- Sección del Encabezado (Hero) --- */
 .hero-section {
-    background-image: url('URL-DE-TU-IMAGEN-DE-FONDO.jpg');
+    /* IMPORTANTE: Reemplaza 'tu-imagen-de-fondo.jpg' con la ruta de tu imagen */
+    background-image: url('https://i.ibb.co/L8y6b6M/Imagen-de-WhatsApp-2025-09-17-a-las-16-01-29-dd13fdfe.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center 30%; /* Ajusta la posición de la imagen */
     background-repeat: no-repeat;
-    color: #fff; /* Texto blanco sobre la imagen */
+    color: #fff;
     padding: 20px;
-    height: 100vh; /* Opcional: para que ocupe toda la pantalla */
+    height: 100vh; /* Para que ocupe toda la altura de la pantalla */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Barra de navegación */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -59,40 +56,40 @@ h1, h2, h3 {
     background-color: #fff;
 }
 
-/* Contenido de texto del encabezado */
 .hero-content {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
     color: #000;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 20px 20px 40px; /* Margen para separarlo del borde inferior */
 }
 
 .headline {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.2rem); /* Tamaño de fuente adaptable */
     font-weight: 500;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
-/* Sección de llamada a la acción */
-.call-to-action {
-    background-color: #f7f7f7; /* Color de fondo similar al de la imagen */
+/* --- Sección del Catálogo (CTA) --- */
+.cta-container {
     padding: 40px 20px;
+    background-color: #f7f7f7;
 }
 
-.cta-content {
+.cta-box {
     max-width: 600px;
     margin: auto;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra más sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
 
 .cta-title {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
     margin-top: 0;
 }
 
@@ -113,12 +110,23 @@ h1, h2, h3 {
     color: #fff;
 }
 
-/* Pie de página */
+/* --- Sección del Título Secundario --- */
+.secondary-title-section {
+    padding: 20px 20px 40px;
+    text-align: center;
+}
+
+/* --- Pie de Página (Footer) --- */
 footer {
     text-align: center;
     padding: 20px;
     color: #999;
     font-size: 0.9rem;
+}
+
+footer span {
+    font-weight: bold;
+    color: #666;
 }
 
 footer span {
