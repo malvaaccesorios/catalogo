@@ -83,13 +83,7 @@ body {
 }
 
 /* --- Ajusta el color de los puntos de navegación para que se vean mejor --- */
-.dot {
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
-.dot.active {
-    background-color: #000;
-}
 .hero-content {
     background-color: rgba(255, 255, 255, 0.7);
     color: #000;
