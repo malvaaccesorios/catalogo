@@ -34,14 +34,13 @@ body {
     display: block;
 }
 
-/* --- Contenido de la Página (Ajustado) --- */
+/* --- Contenido de la Página --- */
 .main-content-wrapper {
     width: 100%;
-    /* REMOVIDO: background-color: rgba(255, 255, 255, 0.9); */
     overflow-y: auto;
 }
 
-/* --- Estilos de la Página (Ajustados) --- */
+/* --- Estilos de la Página --- */
 .hero-section {
     color: #333;
     padding: 20px;
@@ -58,31 +57,28 @@ body {
     padding: 10px 0;
 }
 
-/* --- Nuevo estilo para el encuadre del logo --- */
+/* El encuadre del logo */
 .logo-wrapper {
     position: relative;
-    padding: 15px 25px; /* Espaciado dentro de la caja */
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+    padding: 15px 25px;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.5s ease-out; /* Transición para la animación de desaparición */
+    transition: opacity 0.5s ease-out;
 }
 
-/* --- Animación: El encuadre desaparece al pasar el mouse --- */
 .logo-wrapper:hover {
     opacity: 0;
-    pointer-events: none; /* Desactiva los eventos del mouse cuando no es visible */
+    pointer-events: none;
 }
 
-/* --- Estilos existentes, pero con un ajuste de color --- */
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 600;
-    color: #000; /* Asegúrate de que el texto sea negro para que se lea en el fondo blanco */
+    color: #000;
 }
 
-/* --- Ajusta el color de los puntos de navegación para que se vean mejor --- */
 
 .hero-content {
     background-color: rgba(255, 255, 255, 0.7);
@@ -90,7 +86,7 @@ body {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 20px 40px;
+    margin: 20px;
 }
 
 .headline {
@@ -141,7 +137,6 @@ h2 {
 .secondary-title-section {
     padding: 20px 20px 40px;
     text-align: center;
-    /* AGREGADO: Fondo para esta sección */
     background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -150,10 +145,33 @@ footer {
     padding: 20px;
     color: #999;
     font-size: 0.9rem;
-    /* AGREGADO: Fondo para el footer */
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+footer span {
+    font-weight: bold;
+    color: #666;
+}
+
+/* --- Media Queries para Móviles --- */
+@media (max-width: 768px) {
+    .hero-content, .cta-box, .logo-wrapper {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .headline {
+        font-size: clamp(1.5rem, 7vw, 1.8rem);
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+}
 footer span {
     font-weight: bold;
     color: #666;
