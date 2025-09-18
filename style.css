@@ -4,16 +4,15 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f7f7f7; /* Fondo sólido y limpio */
+    background-color: #f0ebe4; /* Un tono beige muy suave para el fondo */
 }
 
-/* --- El contenedor principal del contenido (ajustado) --- */
+/* --- Estilos de la Página --- */
 .main-content-wrapper {
     width: 100%;
     overflow-y: auto;
 }
 
-/* --- Estilos de la Página --- */
 .hero-section {
     color: #333;
     padding: 20px;
@@ -30,7 +29,6 @@ body {
     padding: 10px 0;
 }
 
-/* El encuadre del logo (ahora para la imagen) */
 .logo-wrapper {
     position: relative;
     padding: 15px 25px;
@@ -38,7 +36,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: opacity 0.5s ease-out;
-    width: 120px; /* Tamaño del logo */
+    width: 120px;
 }
 
 .logo-wrapper:hover {
@@ -47,18 +45,35 @@ body {
 }
 
 .logo {
-    width: 100%; /* La imagen del logo se ajusta a su contenedor */
+    width: 100%;
     height: auto;
 }
 
-/* Fuentes de los títulos para que coincidan con el logo */
-.headline, h2, .cta-title {
+/* El texto "Malva" usa la misma fuente que los títulos */
+.logo-text {
     font-family: 'Dancing Script', cursive;
     font-weight: normal;
+    color: #000;
+}
+
+.nav-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #000;
 }
 
 .hero-content {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.85); /* Un blanco más sólido para el texto */
     color: #000;
     padding: 25px;
     border-radius: 10px;
@@ -67,7 +82,9 @@ body {
 }
 
 .headline {
+    font-family: 'Dancing Script', cursive;
     font-size: clamp(2.5rem, 8vw, 3.5rem);
+    font-weight: normal;
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -79,7 +96,7 @@ body {
 .cta-box {
     max-width: 600px;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #f0ebe4; /* Un tono cálido para la caja */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -87,7 +104,9 @@ body {
 }
 
 h2 {
+    font-family: 'Dancing Script', cursive;
     font-size: clamp(2rem, 6vw, 2.5rem);
+    font-weight: normal;
     margin-top: 0;
 }
 
@@ -95,16 +114,16 @@ h2 {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 25px;
-    border: 1px solid #333;
+    border: 1px solid #c2b280; /* Un tono dorado o beige para el borde */
     text-decoration: none;
-    color: #333;
+    color: #c2b280;
     font-weight: 500;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .btn-catalog:hover {
-    background-color: #333;
+    background-color: #c2b280;
     color: #fff;
 }
 
