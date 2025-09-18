@@ -58,28 +58,38 @@ body {
     padding: 10px 0;
 }
 
+/* --- Nuevo estilo para el encuadre del logo --- */
+.logo-wrapper {
+    position: relative;
+    padding: 15px 25px; /* Espaciado dentro de la caja */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-out; /* Transición para la animación de desaparición */
+}
+
+/* --- Animación: El encuadre desaparece al pasar el mouse --- */
+.logo-wrapper:hover {
+    opacity: 0;
+    pointer-events: none; /* Desactiva los eventos del mouse cuando no es visible */
+}
+
+/* --- Estilos existentes, pero con un ajuste de color --- */
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 600;
+    color: #000; /* Asegúrate de que el texto sea negro para que se lea en el fondo blanco */
 }
 
-.nav-dots {
-    display: flex;
-    gap: 8px;
-}
-
+/* --- Ajusta el color de los puntos de navegación para que se vean mejor --- */
 .dot {
-    height: 8px;
-    width: 8px;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
 }
 
 .dot.active {
     background-color: #000;
 }
-
 .hero-content {
     background-color: rgba(255, 255, 255, 0.7);
     color: #000;
