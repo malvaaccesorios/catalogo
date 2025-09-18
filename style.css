@@ -83,7 +83,6 @@ body {
 }
 
 
-/* --- Hero Section (Ajustado) --- */
 .hero-section {
     position: relative;
     height: 100vh;
@@ -92,10 +91,9 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(248, 245, 242, 1) 100%), url('URL-DE-TU-IMAGEN.jpg') no-repeat center center/cover;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(248, 245, 242, 1) 100%), url('images/URL-DE-TU-IMAGEN.jpg') no-repeat center center/cover; /* ¡Cambia esta línea! */
     text-align: center;
 }
-
 .logo-wrapper {
     margin-bottom: 20px;
 }
