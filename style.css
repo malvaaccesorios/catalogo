@@ -44,13 +44,13 @@ body {
     transition-delay: 0.3s;
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section (Ajustado) --- */
 .hero-section {
     position: relative;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
     align-items: center;
     padding: 20px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(248, 245, 242, 1) 100%), url('URL-DE-TU-IMAGEN.jpg') no-repeat center center/cover;
@@ -58,11 +58,8 @@ body {
 }
 
 .logo-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    /* Eliminamos el posicionamiento absoluto para evitar solapamientos */
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -140,10 +137,20 @@ footer {
         margin: 0 auto;
     }
     
+    .hero-section {
+        flex-direction: row; /* Coloca los elementos uno al lado del otro */
+        justify-content: space-around;
+        align-items: center;
+    }
+    
     .hero-content {
         max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .logo-wrapper {
+        margin-bottom: 0;
     }
     
     .cta-container {
