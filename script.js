@@ -1,37 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    
-    // Si necesitas botones para el carrusel, quita los comentarios de estas líneas
-    // const nextButton = document.querySelector('.next-btn');
-    // const prevButton = document.querySelector('.prev-btn');
-
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    let currentSlide = 0;
-
-    const moveToSlide = (track, currentSlide) => {
-        track.style.transform = 'translateX(-' + currentSlide * slideWidth + 'px)';
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2 // El elemento es 20% visible
     };
 
-    // Deslizamiento automático
-    const autoSlideInterval = 3000; // 3000 milisegundos = 3 segundos
-    let slideTimer;
-
-    const startAutoSlide = () => {
-        slideTimer = setInterval(() => {
-            if (currentSlide < slides.length - 1) {
-                currentSlide++;
-            } else {
-                currentSlide = 0;
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
             }
-            moveToSlide(track, currentSlide);
-        }, autoSlideInterval);
-    };
+        });
+    }, observerOptions);
 
-    const resetAutoSlide = () => {
-        clearInterval(slideTimer);
-        startAutoSlide();
-    };
-
-    startAutoSlide();
+    const animatableElements = document.querySelectorAll('.animatable');
+    animatableElements.forEach(element => {
+        observer.observe(element);
+    });
 });
