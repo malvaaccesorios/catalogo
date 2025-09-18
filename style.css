@@ -1,126 +1,201 @@
+/* --- Estilos Generales y Mobile First --- */
+:root {
+    --primary-color: #4a4a4a;
+    --secondary-color: #c2b280;
+    --background-color: #f8f5f2;
+    --text-color: #333;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #fff;
-  color: #222;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
 }
 
-/* Hero */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  background: url("hero.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-}
-.hero h1 {
-  position: relative;
-  color: white;
-  font-size: 2rem;
-  z-index: 2;
+/* --- Animaciones --- */
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-/* Sección texto */
-.section {
-  padding: 20px;
-}
-.section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.animated {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Caja destacada */
-.card {
-  background: #f8f8f8;
-  border-radius: 6px;
-  padding: 20px;
-  margin: 20px;
-  text-align: center;
-}
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-.card button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  border: 1px solid #222;
-  background: white;
-  cursor: pointer;
-  border-radius: 4px;
-  font-weight: bold;
+.animated.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Footer */
+.animated.fade-in {
+    transform: none;
+}
+
+.animated.slide-up {
+    transform: translateY(30px);
+}
+
+.animated.is-visible.slide-up {
+    transform: translateY(0);
+}
+
+.animated.slide-up-delay {
+    transition-delay: 0.3s;
+}
+
+/* Estilo del botón de WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.5s ease-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-btn img {
+    width: 35px;
+    height: 35px;
+}
+
+
+/* --- Hero Section (Ajustado) --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(248, 245, 242, 1) 100%), url('URL-DE-TU-IMAGEN.jpg') no-repeat center center/cover;
+    text-align: center;
+}
+
+.logo-wrapper {
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.headline {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+
+/* --- Main Content Sections --- */
+main {
+    padding: 20px;
+}
+
+.cta-container {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.cta-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.btn-catalog {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 1px solid var(--secondary-color);
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-catalog:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.secondary-title-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* --- Footer --- */
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #fafafa;
-  font-size: 0.9rem;
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-size: 0.9rem;
 }
 
-/* Botón WhatsApp */
-.whatsapp {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-.whatsapp img {
-  width: 30px;
-  height: 30px;
-}
-/* Caja destacada */
-.card {
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 40px auto;
-  max-width: 600px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  text-align: left;
-}
+/* --- Desktop Styles (media queries) --- */
+@media (min-width: 768px) {
+    .main-content-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .hero-content {
+        max-width: 600px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .logo-wrapper {
+        margin-bottom: 0;
+    }
+    
+    .cta-container {
+        padding: 40px 0;
+    }
 
-.card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  font-weight: 600;
-  color: #111;
+    .cta-box {
+        max-width: 800px;
+    }
 }
-
-.card p {
-  margin-bottom: 20px;
-  color: #444;
-}
-
-.card button {
-  padding: 10px 20px;
-  border: 1px solid #111;
-  background: white;
-  cursor: pointer;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.card button:hover {
-  background: #111;
-  color: white;
-}
-
