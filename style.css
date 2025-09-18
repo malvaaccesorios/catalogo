@@ -15,7 +15,7 @@ body {
 
 .hero-section {
     /* --- FONDO DE IMAGEN SOLO EN ESTA SECCIÓN --- */
-    background-image: url('URL-DE-TU-IMAGEN.jpg'); /* Reemplaza esta URL con la tuya */
+    background-image: url(images/accesorios-2.jpg); /* Reemplaza esta URL con la tuya */
     background-size: cover;
     background-position: center;
     /* ------------------------------------------- */
