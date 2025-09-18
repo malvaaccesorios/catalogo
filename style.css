@@ -4,7 +4,30 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f0ebe4; /* Un tono beige muy suave para el fondo */
+    background-color: #f0ebe4;
+}
+
+/* --- Animaciones --- */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animatable {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animatable.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* --- Estilos de la Página --- */
@@ -14,11 +37,9 @@ body {
 }
 
 .hero-section {
-    /* --- FONDO DE IMAGEN SOLO EN ESTA SECCIÓN --- */
-    background-image: url(images/accesorios-2.jpg); /* Reemplaza esta URL con la tuya */
+    background-image: url('URL-DE-TU-IMAGEN.jpg');
     background-size: cover;
     background-position: center;
-    /* ------------------------------------------- */
     color: #333;
     padding: 20px;
     height: 100vh;
@@ -130,6 +151,11 @@ footer {
 footer span {
     font-weight: bold;
     color: #666;
+    transition: color 0.3s;
+}
+
+footer span:hover {
+    color: #c2b280;
 }
 
 /* Media Queries para Móviles */
@@ -138,7 +164,6 @@ footer span {
         padding: 15px;
         margin: 10px;
     }
-
     .headline {
         font-size: clamp(2rem, 9vw, 2.5rem);
     }
